@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class BossWeapon : MonoBehaviour
 {
-    public Transform firePoint;
-    public GameObject bullet;
+    float fireRate;
+    float wait;
 
-    private float time = 0.0f;
-    public float wait = 2f;
-
-    void Bullet()
+    // Use this for initialization
+    void Start()
     {
-        time += Time.deltaTime;
-        if (time >= wait)
-        {
-            time = 0.0f;
-            Debug.Log("Boom!");
-        }
+        fireRate = 2f;
+        wait = Time.time;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        MainCannon();
+    }
 
+    void MainCannon()
+    {
+        if (Time.time >= wait)
+        {
+            Debug.Log("Boom!");
+            //Instantiate(bullet, transform.position, Quaternion.identity);
+            wait = Time.time + fireRate;
+        }
+
+    }
 }
