@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //Character Stats
     //Unity overrides if public float
-    private float speed = 5; 
+    private float speed = 5;
 
     void Update()
     {
