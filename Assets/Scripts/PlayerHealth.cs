@@ -21,10 +21,12 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //Particle Collision
-    void OnParticleCollision(GameObject other)
+    //Bullet Collision
+    void OnCollisionEnter(Collision col)
     {
-        Debug.Log("Poo!");
-        Health -= 1; 
+    if(col.gameObject.tag=="Damage")
+        {
+            Debug.Log("Fuck.");
+        }
     }
 }
