@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BossWeapon : MonoBehaviour
 {
+
+    [SerializeField]
+    GameObject bullet;
+
     float fireRate;
     float wait;
 
@@ -22,10 +26,10 @@ public class BossWeapon : MonoBehaviour
 
     void MainCannon()
     {
-        if (Time.time >= wait)
+        if (Time.time > wait)
         {
             Debug.Log("Boom!");
-            //Instantiate(bullet, transform.position, Quaternion.identity);
+            Instantiate (bullet, transform.position, transform.rotation);
             wait = Time.time + fireRate;
         }
 

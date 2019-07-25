@@ -50,6 +50,9 @@ TagManager:
   - name: 4skin
     uniqueID: 1522155697
     locked: 0
-  - name: UI
+  - name: Bullets and Effects
     uniqueID: 3790725637
+    locked: 0
+  - name: UI
+    uniqueID: 2594963427
     locked: 0
