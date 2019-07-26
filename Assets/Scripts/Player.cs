@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     //Character Stats
     //Unity overrides if public float
     private float speed = 5;
-    public int Health = 4;
+    public int health = 4;
 
     //Use on trigger enter for damage detection, not collider.
     private void OnTriggerEnter2D(Collider2D other)
@@ -15,11 +15,18 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             Debug.Log("Fuark.");
-            
+            health -= 1;
+            if (health <= 0)
+            {
+                Die();
+            }
         }
     }
 
-
+    void Die()
+    {
+        Destroy(gameObject);
+    }
         
     void Update()
     {
