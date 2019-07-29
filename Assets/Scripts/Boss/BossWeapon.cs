@@ -30,7 +30,8 @@ public class BossWeapon : MonoBehaviour
         {
             Debug.Log("Boom!");
             Instantiate (bullet, transform.position, transform.rotation);
-            wait = Time.time + fireRate;
+            //True max value is -1  of inputted number
+            wait = Time.time + fireRate + Random.Range(0,4);
         }
 
     }

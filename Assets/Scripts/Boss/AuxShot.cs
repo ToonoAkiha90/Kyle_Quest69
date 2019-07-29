@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class AuxShot : MonoBehaviour
 {
     float bulletSpeed;
     float spread;
@@ -15,21 +15,20 @@ public class Bullet : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        bulletSpeed = 7f;
-        spread = Random.Range(-.7f, .7f);
+        bulletSpeed = 2f;
+        spread = Random.Range(-3f, 3f);
 
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindObjectOfType<Player>();
         moveDirection = (target.transform.position - transform.position).normalized * bulletSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y + spread);
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 10f);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name.Equals("YMAN"))
         {
-            Debug.Log("Hit!");
             Destroy(gameObject);
         }
     }

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private float speed = 5;
     public int health = 4;
 
+    //Damage Calcs
     //Use on trigger enter for damage detection, not collider.
     private void OnTriggerEnter2D(Collider2D other)
     {
