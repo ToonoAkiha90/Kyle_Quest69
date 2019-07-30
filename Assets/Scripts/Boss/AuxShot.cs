@@ -16,7 +16,7 @@ public class AuxShot : MonoBehaviour
     void Start()
     {
         bulletSpeed = 2f;
-        spread = Random.Range(-3f, 3f);
+        spread = Random.Range(-1f, 1f);
 
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindObjectOfType<Player>();

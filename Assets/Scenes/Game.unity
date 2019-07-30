@@ -879,6 +879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 81747611110610468, guid: a07d7477ccafebe48b3fdaec85c968d9, type: 3}
+  auxbullet: {fileID: 4692383445982443773, guid: 93c70900e3024a14bafd71350c7f017a,
+    type: 3}
 --- !u!1 &1503589263
 GameObject:
   m_ObjectHideFlags: 0
