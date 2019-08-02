@@ -38,5 +38,10 @@ public class Player : MonoBehaviour
         Vector3 move = new Vector3(x, y, 0);
 
         transform.position += Vector3.ClampMagnitude(move, speed) * Time.deltaTime;
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    public int health = 20;
+    public int health;
 
     public void TakeDamage (int damage)
     {
@@ -20,4 +20,5 @@ public class Boss : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
