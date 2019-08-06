@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     //Character Stats
     //Unity overrides if public float
     private float speed = 5;
-    public int health = 4;
+    int health = 4;
 
     //Damage Calcs
     //Use on trigger enter for damage detection, not collider.
