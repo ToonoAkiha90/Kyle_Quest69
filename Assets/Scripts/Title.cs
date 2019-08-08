@@ -7,7 +7,13 @@ public class Title: MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKey)
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
+        else if (Input.anyKey)
         {
             Debug.Log("A key or mouse click has been detected");
             SceneManager.LoadScene(1);
