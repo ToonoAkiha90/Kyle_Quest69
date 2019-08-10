@@ -9,7 +9,6 @@ public class BossMovement : MonoBehaviour
     public float retreatDistance;
 
     private Transform player;
-    private float dodge;
 
     void Start()
     {
