@@ -28,6 +28,7 @@ public class BossMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
 
+        //What do when in sweet spot
         else if (Vector3.Distance(transform.position, player.position) < stoppingDistance && Vector3.Distance(transform.position, player.position) > retreatDistance)
         {
             if (Time.time > wait)
