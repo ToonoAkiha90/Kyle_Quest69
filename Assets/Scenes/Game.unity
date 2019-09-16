@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  stoppingDistance: 10
+  stoppingDistance: 9
   retreatDistance: 7
 --- !u!114 &198399907
 MonoBehaviour:

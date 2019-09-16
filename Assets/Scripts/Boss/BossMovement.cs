@@ -22,7 +22,7 @@ public class BossMovement : MonoBehaviour
 
     void Update()
     {
-        //Chasing if's
+        //Approach
         if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -33,17 +33,18 @@ public class BossMovement : MonoBehaviour
             if (Time.time > wait)
             {
                 Strafe();
-                wait = Time.time + 2;
+                wait = Time.time + Random.Range(1f,5f);
             }
         }
 
+        //Retreat
         else if (Vector3.Distance(transform.position, player.position) < retreatDistance)
         {
             //-speed does the retreating
             transform.position = Vector3.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
     }
-
+    //Supposed to randomize movement when in sweet spot, but is teleporting
     void Strafe()
         {
         transform.position = Vector3.Lerp(transform.position, Random.insideUnitCircle * 109, speed * Time.deltaTime);
