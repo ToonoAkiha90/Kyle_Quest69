@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e98c9e52309d624ea02ed46514a4fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 15
 --- !u!58 &198399902
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -449,6 +449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a2fae1252f57b4b83bc10b217347e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  health: 5
 --- !u!114 &608747778
 MonoBehaviour:
   m_ObjectHideFlags: 0

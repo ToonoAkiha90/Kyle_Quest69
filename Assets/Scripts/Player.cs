@@ -7,8 +7,10 @@ public class Player : MonoBehaviour
 {
     //Character Stats
     //Unity overrides if public float
-    private float speed = 5;
-    int health = 4;
+    [SerializeField]
+    private float speed;
+    [SerializeField]
+    private int health;
 
     //Damage Calcs
     //Use on trigger enter for damage detection, not collider.
